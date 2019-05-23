@@ -1,0 +1,516 @@
+@include-when-export url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|&display=swap');
+@include-when-export url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
+@include-when-export url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700|Montserrat:400,400i,700,700i|Oxygen+Mono&display=swap'); */
+@charset "UTF-8";
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Montserrat Bold Italic'), url('./note-taking/Montserrat-BoldItalic.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), url('./note-taking/Montserrat-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), url('./note-taking/Montserrat-Bold.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'M PLUS Rounded 1c';
+  font-style: normal;
+  font-weight: 400;
+  src: local('M PLUS Rounded 1c'), url('./note-taking/MPLUSRounded1c-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'M PLUS Rounded 1c';
+  font-style: normal;
+  font-weight: 700;
+  src: local('M PLUS Rounded 1c Bold'), url('./note-taking/MPLUSRounded1c-Bold.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen Mono'), url('./note-taking/OxygenMono-Regular.ttf') format('ttf');
+}
+
+:root {
+	--white:    #fff;
+	--gray-100: #f8f9fa;
+	--gray-200: #e9ecef;
+	--gray-300: #dee2e6;
+	--gray-400: #ced4da;
+	--gray-500: #adb5bd;
+	--gray-600: #6c757d;
+	--gray-700: #495057;
+	--gray-800: #343a40;
+	--gray-900: #212529;
+	--black:    #000;
+	--blue:     #007bff;
+	--indigo:   #6610f2;
+	--purple:   #6f42c1;
+	--pink:     #e83e8c;
+	--red:      #dc3545;
+	--orange:   #fd7e14;
+	--yellow:   #ffc107;
+	--green:    #28a745;
+	--teal:     #20c997;
+	--cyan:     #17a2b8;
+
+  --text-color: var(--gray-700);
+  --md-char-color: var(--red);
+
+  --window-border: none;
+
+  --active-file-bg-color: var(--gray-200);
+  --active-file-text-color: inherit;
+  --active-file-border-color: var(--green);
+
+  --side-bar-bg-color: var(--gray-100);
+  --item-hover-bg-color: var(--gray-200);
+  --item-hover-text-color: var(--red);
+  --control-text-color: var(--gray-700);
+
+  --typora-center-window-title: true;
+}
+
+@media all {
+  .page-break {
+    display: none;
+  }
+  html, body, #write{
+    background: #fefefe;
+  }
+  #write{
+    padding-bottom: 100%;
+    margin-bottom: 100%;
+    font-size: 14px;
+  }
+  img {
+    max-width:50%;
+  }
+  p.mathjax-block, .mathjax-block {
+    font-size: 1em; 
+  }
+}
+
+@media print {
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+  html, body, #write{
+    background: #fff;
+  }
+  #write{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 10px;
+  }
+  img {
+    margin-top: 2px;
+    max-width: 30%;
+  }
+  p.mathjax-block, .mathjax-block {
+    font-size: 0.6em; 
+  }
+}
+
+.mac-seamless-mode #typora-sidebar {
+  top: var(--mac-title-bar-height);
+  padding-top: 0;
+  height: auto;
+}
+
+html, body, #write {
+  font-family: "Montserrat", "M PLUS Rounded 1c", "Century Gothic", 'Yu Gothic', "STHeiti", sans-serif;
+  font-weight: 300;
+}
+
+#write {
+  max-width: 914px;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--blue);
+  line-height: 1em;
+}
+h1, h2, h3, h4, h5{
+  font-weight: normal;
+}
+h1, h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8em;
+}
+h2 {
+  line-height: 1.4em;
+}
+h2:after {
+  border-bottom: 1px solid #2f2f2f;
+  content: '';
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  height: 1px;
+}
+h3, h4, h5, h6{
+  line-height: .5em;
+}
+h3{
+  font-size: 1.5em;
+}
+h4{
+  font-size: 1.3em;
+}
+h5 {
+  font-size: 1.1em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+p {
+  color: var(--gray-700);
+  font-size: 1em;
+  line-height: 1.3em;
+  margin: 0 0 1.25em;
+  margin-bottom: 10px;
+}
+#write>h3.md-focus:before {
+  left: -1.875em;
+  top: 0.5em;
+  padding: 2px;
+}
+#write>h4.md-focus:before {
+  left: -1.875em;
+  top: 0.3125em;
+  padding: 2px;
+}
+#write>h5.md-focus:before {
+  left: -1.875em;
+  top: 0.25em;
+  padding: 2px;
+}
+#write>h6.md-focus:before {
+  left: -1.875em;
+  top: .125em;
+  padding: 2px;
+}
+@media screen and (max-width: 48em) {
+  blockquote {
+    margin-left: 1em;
+    margin-right: 0;
+    padding: 0.5em;
+  }
+  .h1, h1 {
+    font-size: 2.827em;
+  }
+  .h2, h2 {
+    font-size: 1.999em;
+  }
+  .h3, h3 {
+    font-size: 1.413em;
+  }
+  .h4, h4 {
+    font-size: 1.250em;
+  }
+  .h5, h5 {
+    font-size: 1.150em;
+  }
+  .h6, h6 {
+    font-size: 1em;
+  }
+}
+
+a, .md-def-url {
+  color: var(--cyan);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  margin-bottom: 5px;
+}
+table th, table td {
+  padding: 5px 3px;
+  vertical-align: middle;
+  border-top: 1px solid var(--gray-300);
+}
+table th {
+  font-weight: bold;
+}
+table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #333;
+}
+table tr:nth-child(even) {
+  background: var(--gray-100);
+}
+table caption+thead tr:first-child th, table caption+thead tr:first-child td, table colgroup+thead tr:first-child th, table colgroup+thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td {
+  border-top: 0
+}
+table tbody+tbody {
+  border-top: 2px solid var(--gray-300);
+}
+
+.md-fences, code, tt {
+  border: 1px solid var(--gray-300);
+  background-color: var(--gray-100);
+  border-radius: 3px;
+  padding: 0;
+  font-family: "Oxygen Mono", Courier, monospace;
+  padding: 2px 4px 0px 4px;
+  font-size: 0.9em;
+}
+.md-fences {
+  margin: 0 0 10px;
+  font-size: 1em;
+  padding: 0.4em 1em 0.3em 0;
+}
+
+ul, ol{
+  margin: 8px 0;
+}
+li>p {
+  margin: 2px 0;
+}
+li>ol, li>ul{
+  margin: 0;
+}
+
+.task-list {
+  padding-left: 0;
+}
+.task-list-item {
+  padding-left: 2.125em;
+  margin: 5px 0;
+}
+.task-list-item input:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid gray;
+  background-color: #fdfdfd;
+  margin-left: 0;
+  margin-top: -0.5rem;
+}
+.task-list-item input:checked:before, .task-list-item input[checked]:before {
+  content: '\25FC';
+  /*◘*/
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  margin-top: -1rem;
+}
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  .task-list-item input:before {
+    margin-top: -0.2rem;
+  }
+
+  .task-list-item input:checked:before, .task-list-item input[checked]:before {
+    margin-top: -0.2rem;
+  }
+}
+
+blockquote {
+  margin: 0 0 1.11111em;
+  padding: 0.5em 1.11111em 0 1.05556em;
+  border-left: 1px solid gray;
+}
+blockquote, blockquote p {
+  line-height: 1.3em;
+  color: #6f6f6f;
+}
+
+#write pre.md-meta-block {
+  min-height: 30px;
+  background: #f8f8f8;
+  padding: 1.5em;
+  font-weight: 300;
+  font-size: 1em;
+  padding-bottom: 1.5em;
+  padding-top: 3em;
+  margin-top: -1.5em;
+  color: #999;
+  width: 100vw;
+  max-width: calc(100% + 60px);
+  margin-left: -30px;
+  border-left: 30px #f8f8f8 solid;
+  border-right: 30px #f8f8f8 solid;
+}
+
+.MathJax_Display {
+  margin-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+  bottom: 5px;
+  box-shadow: none;
+}
+p.mathjax-block, .mathjax-block {
+  padding-bottom: 0;
+}
+
+.md-image>.md-meta {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.md-image>img {
+  margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+  padding-left: 4px;
+}
+
+#typora-source {
+  color: #555;
+}
+
+/** ui for windows **/
+
+#md-searchpanel {
+  border-bottom: 1px solid #ccc;
+}
+#md-searchpanel .btn {
+  border: 1px solid #ccc;
+}
+
+#md-notification:before {
+  top: 6px;
+}
+#md-notification {
+  background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+  border: 1px solid #ccc;
+}
+
+#typora-sidebar {
+  box-shadow: none;
+}
+
+.file-list-item, .show-folder-name .file-list-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 20px;
+}
+
+.file-list-item-summary {
+  height: 40px;
+  line-height: 20px;
+}
+
+
+/* Header Counter */
+#write { counter-reset: h1; }
+h1 { counter-reset: h2; }
+h2 { counter-reset: h3; }
+h3 { counter-reset: h4; }
+h4 { counter-reset: h5; }
+/* h5 { counter-reset: h6; } */
+
+/** put counter result into headings */
+#write h1:before { counter-increment: h1; }
+#write h2:before { counter-increment: h2; }
+#write h3:before, h3.md-focus.md-heading:before{
+  counter-increment: h3;
+  content: counter(h3) ") "
+}
+#write h4:before, h4.md-focus.md-heading:before {
+  counter-increment: h4;
+  content: counter(h3) "."counter(h4) ") "
+}
+#write h5:before, h5.md-focus.md-heading:before {
+  counter-increment: h5;
+  content: counter(h3) "."counter(h4) "."counter(h5) ") "
+}
+/* #write h6:before, h6.md-focus.md-heading:before {
+    counter-increment: h6;
+    content:  counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
+} */
+
+/** override the default style for focused headings */
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+  color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: inherit;
+  left: initial;
+  float: none;
+  top: initial;
+  font-size: inherit;
+  padding-left: inherit;
+  padding-right: inherit;
+  vertical-align: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* Additional CSS for overwriting */
+div.picture50 img {
+  max-width: 50% !important;
+  max-height: 50% !important;
+}
+div.picture60 img {
+  max-width: 60% !important;
+  max-height: 60% !important;
+}
+div.picture70 img {
+  max-width: 70% !important;
+  max-height: 70% !important;
+}
+div.picture80 img {
+  max-width: 80% !important;
+  max-height: 80% !important;
+}
+
+div.center { text-align: center; }
+
+/* For note taking */
+h1 .highlight, h2 .highlight, h3 .highlight, h4 .highlight, h5 .highlight, h6 .highlight{
+	color: var(--red);
+	background-color: inherit;
+}
+.highlight{
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.green-highlight{ background-color: #53FF28;}
+.blue-highlight{ background-color: var(--blue);}
+.orange-highlight{ background-color: var(--orange);}
+
+.blue-text{ color: var(--blue);}
+.indigo-text{ color: var(--indigo);}
+.purple-text{ color: var(--purple);}
+.pink-text{ color: var(--pink);}
+.red-text{ color: var(--red);}
+.orange-text{ color: var(--orange);}
+.yellow-text{ color: var(--yellow);}
+.green-text{ color: var(--green);}
+.teal-text{ color: var(--teal);}
+.cyan-text{ color: var(--cyan);}
