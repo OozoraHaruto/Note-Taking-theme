@@ -38,7 +38,7 @@ These are all in html as there is no other way, pick it up it's easy
 
 Just paste at the place you want the page to break
 
-####Highlight in various colours
+#### Highlight in various colours
 
 ```html
 <span class="highlight green-highlight">Content</span>
@@ -69,7 +69,7 @@ As I said above there is are times when it is not possible to achieve with part 
 These are the steps to follow
 
 1. You will usually see this `![Screenshot](assets/Screenshot.png)` when you drag an image into Typora
-2. Copy everything in the brackets and paste it into the `src ` part of the code below (leaving the inverted commas alone)
+2. Copy everything in the brackets and paste it into the `src` part of the code below
 
 ```html
 <div class="picture60"><img src="assets/Screenshot.png"/></div>
@@ -92,4 +92,5 @@ Adding `center` to it will center the image when printing (doesn't show in real-
 
 Using this to take notes is easy, printing the notes may take some try and error here and there.
 
-All the best for your work or school (since you are using this) (*•̀ᴗ•́*)و ̑̑
+All the best for your work or school (since you are using this) (\*•̀ᴗ•́\*)و ̑̑
+

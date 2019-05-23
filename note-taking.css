@@ -281,6 +281,7 @@ table tbody+tbody {
 
 ul, ol{
   margin: 8px 0;
+  padding-left: 28px;
 }
 li>p {
   margin: 2px 0;
